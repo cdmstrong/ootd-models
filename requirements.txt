@@ -1,0 +1,14 @@
+# python -m pip install -U "git+https://github.com/huggingface/diffusers.git"
+transformers 
+accelerate 
+safetensors
+rembg
+uvicorn
+fastapi
+requests
+Pillow
+numpy
+opencv-python
+onnxruntime
+runpod
+git+https://github.com/huggingface/diffusers.git@v0.37.0.dev0
