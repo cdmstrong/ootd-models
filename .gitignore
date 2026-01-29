@@ -18,3 +18,4 @@ docker-compose.override.example.yml
 wheels
 flux2-klein
 .u2net
+diffusers

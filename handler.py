@@ -184,17 +184,23 @@ def _handle_remove_background(job_input: Dict[str, Any], job_id: str) -> Dict[st
         }
 
 
-def handler(job: Dict[str, Any]) -> Dict[str, Any]:
+def handler(event: Dict[str, Any], context: Any | None = None) -> Dict[str, Any]:
     """Runpod serverless handler.
 
-    job structure (from Runpod docs):
-    {
-        "id": "...",
-        "input": { ... }
-    }
+    Parameters
+    ----------
+    event:
+        The RunPod job/event payload, typically:
+        {
+            "id": "...",
+            "input": { ... }
+        }
+    context:
+        Optional execution context for compatibility with handler(event, context)
+        style signatures. Not used by this implementation.
     """
-    job_id = str(job.get("id", "unknown"))
-    job_input = job.get("input") or {}
+    job_id = str(event.get("id", "unknown"))
+    job_input = event.get("input") or {}
 
     task_type = job_input.get("task_type", "infer")
 
