@@ -1,0 +1,12 @@
+{
+    "title": "Ootd Models",
+    "description": "OOTD inference service",
+    "type": "serverless",
+    "category": "image",
+    "config": {
+      "runsOn": "GPU",
+      "containerDiskInGb": 30,
+      "gpuCount": 1,
+      "gpuIds": "AMPERE_24,AMPERE_16,ADA_24"
+    }
+  }

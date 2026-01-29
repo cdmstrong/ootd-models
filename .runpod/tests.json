@@ -1,0 +1,14 @@
+{
+    "tests": [
+      {
+        "name": "test_inference",
+        "input": {
+            "task_type": "infer",
+            "prompt": "Test prompt",
+            "image_paths": ["https://miguverse.migudm.cn/pre/mos/api/release/client_api/v1/buckets/281ad071d3264adea2edc0ce914ed4eb/content/model_1.png"],
+            "remove_background": [false]
+        },
+        "timeout": 10000
+      }
+    ]
+  }
