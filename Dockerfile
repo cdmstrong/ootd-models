@@ -46,7 +46,7 @@ ENV HF_HUB_ENABLE_HF_TRANSFER=1
 RUN hf download Gulraiz00/u2net --local-dir ~/.u2net
 RUN hf download black-forest-labs/FLUX.2-klein-4B --local-dir /app/flux2-klein
 COPY . /app
-
+COPY ./model_1.png /app/model_1.png
 CMD ["python", "handler.py"]
 # Expose ports
 # EXPOSE 8000 8001
