@@ -25,7 +25,7 @@ RUN python -m pip install --upgrade pip
 RUN python -m pip install torch torchvision torchaudio   --index-url https://download.pytorch.org/whl/cu121
 # RUN pip install /app/wheels/*.whl
 # RUN rm -rf /app/wheels
-COPY ./.u2net /root/.u2net
+# COPY ./.u2net /root/.u2net
 COPY requirements.txt .
 # COPY diffusers /app/diffusers
 
